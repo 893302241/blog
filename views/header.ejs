@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+  <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>袁小布的博客</title>
+	<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+  	<h1><%= title %></h1>
+  	<!-- <span><form action="/search" method="GET">搜索<input type="text" name="keyword" placeholder="SEARCH" class="search" /></form></span> -->
+  </header>
+  <div class="row">
+    <nav class="col-xs-2 col-xs-offset-1">
+      <ul>
+        <li><a title="主页" href="/">主页</a></li>
+        <li><a title="存档" href="/archive">存档</a></li>
+        <li><a title="标签" href="/tags">标签</a></li>
+        <li><a title="友情链接" href="/links">友情链接</a></li>
+      
+    <% if (user) { %>
+      <li><a title="发表" href="/post">发表</a></li>
+      <li><a title="登出" href="/logout">退出</a></li>
+      <li><a title="上传" href="/upload">上传</a></li>
+    <% } else { %>
+      <li><a title="登录" href="/login">登录</a></li>
+      <li><a title="注册" href="/reg">注册</a></li>
+    <% } %>
+      </ul>
+    </nav>
+    <% if (success) { %>
+      <div><%= success %></div>
+    <% } %>
+    <% if (error) { %>
+      <div><%= error %> </div>
+    <% } %>
+    <article class="col-xs-9">
+  
