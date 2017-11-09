@@ -12,6 +12,7 @@ var crypto = require('crypto'),
     Post = require('../models/post.js'),
     Comment = require('../models/comment.js');
 
+
 module.exports = function(app) {
 app.get('/', function (req, res) {
   //判断是否是第一页，并把请求的页数转换成 number 类型

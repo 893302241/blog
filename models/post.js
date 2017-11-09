@@ -7,6 +7,7 @@ function Post(name, title, tags, post) {
   this.post = post;
 }
 
+
 module.exports = Post;
 
 //存储一篇文章及其相关信息
